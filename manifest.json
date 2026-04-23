@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Disnat Clean View",
+  "version": "1.0.0",
+  "description": "Replaces the Disnat portfolio page with a modern glassmorphism dashboard.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://tmw.secure.vmd.ca/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://tmw.secure.vmd.ca/s9web/secure/portfolio/group/client*"],
+      "js": ["storage_logic.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
